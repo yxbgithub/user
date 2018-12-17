@@ -32,6 +32,7 @@ public class LoginController {
     @Autowired
     StringRedisTemplate stringRedisTemplate;
 
+
     @GetMapping("/buyer")
     public ServerResponse buyer(@RequestParam("openid") String openid, HttpServletResponse response) {
         UserInfo userInfo = userService.findByOpenId(openid);
